@@ -53,7 +53,6 @@ r = requests.get(url2,headers=headers)
 with open("fodaily.zip", "wb") as zip:
     zip.write(r.content)
     
-from zipfile import ZipFile 
 file_name="fodaily.zip"
 with ZipFile(file_name,'r') as zip:
     zip.extractall()
